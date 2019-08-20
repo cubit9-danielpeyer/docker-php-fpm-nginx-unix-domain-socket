@@ -12,3 +12,11 @@ docker run --rm \
     -p 8080:8080 \
     reoring/php-fpm-nginx-unix-domain-socket
 ```
+
+```
+docker run \
+    --rm \
+    -v $(pwd)/src/laravel-app:/app/html \
+    -e DOCUMENT_ROOT=/app/html/public \
+    -p 8080:8080 php-fpm-uds
+```

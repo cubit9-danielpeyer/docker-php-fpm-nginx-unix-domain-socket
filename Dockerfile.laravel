@@ -1,0 +1,5 @@
+FROM php-fpm-uds:latest
+
+ENV DOCUMENT_ROOT /app/html/public
+
+COPY --chown=$APP_USER src/laravel-app $APP_DIR/html
