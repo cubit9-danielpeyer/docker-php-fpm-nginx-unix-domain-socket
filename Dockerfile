@@ -53,7 +53,7 @@ COPY config/fpm-pool.conf /etc/php7/php-fpm.d/www.conf
 COPY config/php.ini /etc/php7/conf.d/zzz_custom.ini
 
 # Configure supervisord
-COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY config/supervisord.conf $CONF_DIR/supervisord.conf
 
 # Make the document root a volume
 VOLUME $APP_DIR/html
